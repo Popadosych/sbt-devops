@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  ansible:
+    build: ./ansible
+    volumes:
+      - /ansible:/ansible
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - my_network
+
+  app:
+    build:
+      context: .
+      dockerfile: app.Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+
+
+networks:
+  my_network:
+    driver: bridge

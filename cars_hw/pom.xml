@@ -88,7 +88,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.ru.sber.TestMyGarage</mainClass>
+                            <mainClass>ru.sber.TestMyGarage</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
